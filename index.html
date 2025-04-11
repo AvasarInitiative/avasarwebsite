@@ -1,153 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Avasar Initiative</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Podkova', serif;
-            line-height: 1.5;
-            background-color: #ffffff;
-            color: #1e3a8a; /* Blue color for normal text as specified */
-        }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: #ffffff;
-            width: 100%;
-            padding: 20px 0;
-        }
-        
-        .logo-container {
-            text-align: left;
-            padding: 0 20px;
-        }
-        
-        .logo {
-            height: auto;
-            max-width: 150px;
-        }
-        
-        /* Banner Styles */
-        .banner {
-            width: 100%;
-            background-color: #f4a788; /* Peach/salmon color from the banner */
-            padding: 20px 0;
-            text-align: center;
-        }
-        
-        .banner-image {
-            max-width: 500px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
-            border: 2px solid #000;
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: 30px 20px;
-            width: 100%;
-        }
-        
-        .section-title {
-            font-size: 59.4px; /* As specified */
-            color: #000000; /* As specified */
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 600;
-        }
-        
-        .challenge-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            gap: 40px;
-        }
-        
-        .text-content {
-            flex: 1;
-            font-size: 24.6px; /* As specified */
-            color: #1e3a8a; /* As specified */
-        }
-        
-        .image-container {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .challenge-image {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border: 2px solid #000;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .challenge-content {
-                flex-direction: column;
-            }
-            
-            .section-title {
-                font-size: 40px;
-            }
-            
-            .text-content {
-                font-size: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Avasar Initiative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Podkova&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="Untitled design (4).png" alt="The Avasar Initiative Logo" class="logo">
-            </div>
-        </div>
-    </header>
 
-    <section class="banner">
-        <div class="container">
-            <img src="avasarbanner.jpg" alt="Avasar Initiative Banner" class="banner-image">
-        </div>
-    </section>
+  <div class="banner-section">
+    <img src="Avasarbanner.jpg" alt="Avasar Banner" class="banner-img">
+  </div>
 
-    <section class="section">
-        <div class="container">
-            <h1 class="section-title">The Challenges</h1>
-            
-            <div class="challenge-content">
-                <div class="text-content">
-                    <p>India's education system is rich in content but lacks the practicality needed to prepare students for the real world. Although the curriculum is comprehensive, the relentless focus on rote learning and marks-based assessments has made education monotonous, overly theoretical, and, in many cases, outdated.</p>
-                </div>
-                <div class="image-container">
-                    <img src="Book Burden.jpg" alt="Book Burden" class="challenge-image">
-                </div>
-            </div>
-            
-            <!-- Additional content would go here based on images 3 and 4 -->
-            
-        </div>
-    </section>
+  <h1 class="heading">The Challenges</h1>
+
+  <div class="challenges-section">
+    <div class="challenge-text">
+      <p>
+        India's education system is rich in content but lacks the practicality needed to prepare students for the real world. 
+        Although the curriculum is comprehensive, the relentless focus on rote learning and marks-based assessments has made 
+        education monotonous, overly theoretical, and, in many cases, outdated.
+      </p>
+    </div>
+    <img src="Book Burden.jpg" alt="Book Burden" class="side-image">
+  </div>
+
+  <div class="perspective-section">
+    <img src="Perspective.jpg" alt="Perspective" class="side-image left-image">
+    <div class="challenge-text">
+      <p>
+        As educators and mentors, we carry the responsibility of equipping students with a fresh, relevant perspective—one 
+        that aligns with the rapidly evolving world. The gap between what is taught in classrooms and what is required in 
+        real-world scenarios continues to widen.
+      </p>
+    </div>
+  </div>
+
+  <div class="initiative-section">
+    <h1 class="heading">The Avasar Initiative</h1>
+    <p class="initiative-text">
+      The Avasar Initiative was created—an effort to bridge these gaps and cultivate a generation of driven, disciplined, 
+      and destiny-shaping individuals.
+    </p>
+    <div class="cards">
+      <div class="card blue">Baat Karne se<br>Baat banegi</div>
+      <div class="card yellow">Lets be Master<br>of All</div>
+      <div class="card blue">Money is a Great<br>Servant but a<br>Terrible Master</div>
+    </div>
+  </div>
+
 </body>
 </html>
