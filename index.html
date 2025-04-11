@@ -9,37 +9,32 @@
         /* Base Styles */
         :root {
             --heading-color: #1e3a8a; /* Heading color */
-            --font-color: #1d6d55;   /* Body font color */
-            --white: #ffffff;        /* Background */
+            --font-color: #1d6d55;   /* Body and banner text color */
+            --white: #ffffff;        /* Background color */
             --gold: #f2d675;         /* Hover effects */
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 20px;
             line-height: 1.6;
             color: var(--font-color);
             background-color: var(--white);
-            overflow-x: hidden;
         }
-        
-        h1, h2, h3 {
-            color: var(--heading-color);
-        }
-        
+
         .container {
             width: 85%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
-        
+
         /* Header Styles */
         header {
             background-color: var(--white);
@@ -48,84 +43,84 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            padding: 10px 0;
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
         }
-        
+
         .logo {
             height: 80px;
             width: auto;
+            margin-left: 15px; /* Align to upper left */
         }
-        
+
         nav ul {
             display: flex;
             list-style: none;
         }
-        
+
         nav ul li {
             margin-left: 30px;
         }
-        
+
         nav ul li a {
             text-decoration: none;
             color: var(--font-color);
             font-weight: bold;
             transition: color 0.3s ease;
         }
-        
+
         nav ul li a:hover {
             color: var(--gold);
         }
-        
+
         /* Hero Section */
         .hero {
             height: 100vh;
-            background-color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            margin-top: 110px;
+            margin-top: 80px; /* Adjust for fixed header */
+            padding: 20px 0;
         }
-        
-        .hero-content h1 {
-            font-size: 3rem;
-            color: var(--heading-color);
+
+        .hero-content {
+            position: relative;
+        }
+
+        .banner-image {
+            max-width: 1200px; /* Fits 14-inch laptop (1366px) with padding */
+            width: 100%; /* Full width up to max-width */
+            height: auto; /* Maintain aspect ratio */
+            display: block;
+            margin: 0 auto 20px auto; /* Centered with spacing below */
+        }
+
+        .banner-text {
+            font-size: 1.5rem; /* Appropriate size relative to banner */
+            color: var(--font-color); /* #1d6d55 */
+            font-weight: bold;
             margin-bottom: 20px;
         }
-        
-        .hero-content p {
-            font-size: 1.5rem;
-            max-width: 500px;
-            margin: 0 auto;
-            color: var(--font-color);
-        }
-        
-        .hero-image {
-            max-width: 500px; /* Reduced width to make image manageable */
-            height: auto;     /* Maintains aspect ratio */
-            display: block;
-            margin: 0 auto 20px auto; /* Keeps it centered with spacing below */
-        }
-        
+
         /* Challenges Section */
         .challenges {
             padding: 80px 0;
             background-color: var(--white);
         }
-        
+
         .section-heading {
             text-align: center;
             font-size: 2.5rem;
             color: var(--heading-color);
             margin-bottom: 50px;
         }
-        
+
         .challenge-item {
             display: flex;
             align-items: center;
@@ -134,163 +129,72 @@
             transform: translateY(50px);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        
+
         .challenge-item.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .challenge-item:nth-child(odd) {
             flex-direction: row;
         }
-        
+
         .challenge-item:nth-child(even) {
             flex-direction: row-reverse;
         }
-        
+
         .challenge-text {
             flex: 1;
             padding: 20px;
         }
-        
+
         .challenge-text p {
             font-size: 1.1rem;
             line-height: 1.8;
         }
-        
+
         .challenge-text p strong {
             color: var(--heading-color);
         }
-        
+
         .challenge-text p em {
             color: var(--heading-color);
             font-style: normal;
             font-weight: bold;
         }
-        
+
         .challenge-image {
             flex: 1;
             text-align: center;
         }
-        
+
         .challenge-image img {
             max-width: 100%;
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
-        /* Our Solution Section */
-        .solution {
-            padding: 80px 0;
-            background-color: var(--white);
-            text-align: center;
-        }
-        
-        .solution-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .solution-content p {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--heading-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: #152560; /* Slightly darker blue for hover */
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--heading-color);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 20px;
-            padding: 0 20px;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--gold);
-        }
-        
-        .footer-section p, .footer-section a {
-            margin-bottom: 10px;
-            color: var(--white);
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            color: var(--gold);
-        }
-        
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            .hero {
+                margin-top: 120px; /* Adjust for mobile header */
+            }
+
+            .banner-image {
+                max-width: 100%; /* Full width on mobile, visible completely */
+            }
+
+            .banner-text {
+                font-size: 1.2rem; /* Slightly smaller for mobile */
+            }
+
             .challenge-item, .challenge-item:nth-child(even) {
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .challenge-text, .challenge-image {
                 padding: 15px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero {
-                margin-top: 160px;
             }
         }
     </style>
@@ -312,8 +216,8 @@
 
     <section id="home" class="hero">
         <div class="container hero-content">
-            <img src="Avasar Initiative Logo.png" alt="Avasar Initiative Banner" class="hero-image">
-            <p>Bridging the gap between education and real-world skills in India</p>
+            <img src="Avasar Initiative Logo.png" alt="Avasar Initiative Banner" class="banner-image">
+            <div class="banner-text">नियत त्रायते नियति</div>
         </div>
     </section>
 
@@ -359,475 +263,9 @@
         </div>
     </section>
 
-    <section id="solution" class="solution">
-        <div class="container solution-content">
-            <h2 class="section-heading">Our Solution</h2>
-            <p>The <strong>Avasar Initiative</strong> was created—<em>an effort to bridge these gaps and cultivate a generation of driven, disciplined, and destiny-shaping individuals.</em></p>
-            <a href="#contact" class="cta-button">Join Our Initiative</a>
-        </div>
-    </section>
-
     <footer id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@avasarinitiative.org</p>
-                    <p>Phone: +91 12345 67890</p>
-                    <p>Address: New Delhi, India</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="#home">Home</a></p>
-                    <p><a href="#challenges">Challenges</a></p>
-                    <p><a href="#solution">Our Solution</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2025 The Avasar Initiative. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Scroll reveal animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const challengeItems = document.querySelectorAll('.challenge-item');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-            
-            challengeItems.forEach(item => {
-                observer.observe(item);
-            });
-        });
-    </script>
-</body>
-</html>
-
-I am sorry that i have shared the wrong code. Please make the necessary changes in the above code to reduce the image size.
-
-Thank you for your patience and understanding!
-
-It is okay that you shared the wrong code—mistakes happen, and I’m happy to help! I’ve reviewed the code you provided, and I can see the `<img src="Avasar Initiative Logo.png" alt="Avasar Initiative Banner" class="hero-image">` in the hero section, but the `.hero-image` CSS class is still missing. This is why the image size isn’t being controlled, and it’s appearing too huge.
-
-I’ll add the `.hero-image` CSS with a `max-width` of 500px to reduce the image size, keeping it centered and proportional. This should make it fit nicely within the hero section. If 500px doesn’t work perfectly, you can let me know, and we’ll adjust it further.
-
-### Updated Code
-Here’s the corrected version of your code with the `.hero-image` CSS added to reduce the image size:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <title>The Avasar Initiative</title>
-    <style>
-        /* Base Styles */
-        :root {
-            --heading-color: #1e3a8a; /* Heading color */
-            --font-color: #1d6d55;   /* Body font color */
-            --white: #ffffff;        /* Background */
-            --gold: #f2d675;         /* Hover effects */
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            font-size: 20px;
-            line-height: 1.6;
-            color: var(--font-color);
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3 {
-            color: var(--heading-color);
-        }
-        
-        .container {
-            width: 85%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header Styles */
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            height: 80px;
-            width: auto;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--font-color);
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--gold);
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background-color: var(--white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 110px;
-        }
-        
-        .hero-content h1 {
-            font-size: 3rem;
-            color: var(--heading-color);
-            margin-bottom: 20px;
-        }
-        
-        .hero-content p {
-            font-size: 1.5rem;
-            max-width: 500px;
-            margin: 0 auto;
-            color: var(--font-color);
-        }
-        
-        .hero-image {
-            max-width: 500px; /* Reduced width to make image manageable */
-            height: auto;     /* Maintains aspect ratio */
-            display: block;
-            margin: 0 auto 20px auto; /* Keeps it centered with spacing below */
-        }
-        
-        /* Challenges Section */
-        .challenges {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        .section-heading {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--heading-color);
-            margin-bottom: 50px;
-        }
-        
-        .challenge-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 100px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .challenge-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .challenge-item:nth-child(odd) {
-            flex-direction: row;
-        }
-        
-        .challenge-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
-        .challenge-text {
-            flex: 1;
-            padding: 20px;
-        }
-        
-        .challenge-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .challenge-text p strong {
-            color: var(--heading-color);
-        }
-        
-        .challenge-text p em {
-            color: var(--heading-color);
-            font-style: normal;
-            font-weight: bold;
-        }
-        
-        .challenge-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .challenge-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* Our Solution Section */
-        .solution {
-            padding: 80px 0;
-            background-color: var(--white);
-            text-align: center;
-        }
-        
-        .solution-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .solution-content p {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--heading-color);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: #152560; /* Slightly darker blue for hover */
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--heading-color);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 20px;
-            padding: 0 20px;
-        }
-        
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--gold);
-        }
-        
-        .footer-section p, .footer-section a {
-            margin-bottom: 10px;
-            color: var(--white);
-            text-decoration: none;
-        }
-        
-        .footer-section a:hover {
-            color: var(--gold);
-        }
-        
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.2rem;
-        }
-        
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .challenge-item, .challenge-item:nth-child(even) {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .challenge-text, .challenge-image {
-                padding: 15px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 15px;
-            }
-            
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero {
-                margin-top: 160px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container nav-container">
-            <img src="Untitled design (4).png" alt="Avasar Initiative Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#challenges">Challenges</a></li>
-                    <li><a href="#solution">Our Solution</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <img src="Avasar Initiative Logo.png" alt="Avasar Initiative Banner" class="hero-image">
-            <p>Bridging the gap between education and real-world skills in India</p>
-        </div>
-    </section>
-
-    <section id="challenges" class="challenges">
-        <div class="container">
-            <h2 class="section-heading">The Challenges We Address</h2>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p><strong>India's education system</strong> is rich in content but <em>lacks the practicality</em> needed to prepare students for the real world. Although the curriculum is comprehensive, the relentless <em>focus on rote learning</em> and <em>marks-based assessments</em> has made education <em>monotonous, overly theoretical</em>, and, in many cases, <em>outdated</em>.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Students focused on rote learning">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>As educators and mentors, <em>we carry the responsibility of equipping students with a fresh, relevant perspective</em>—one that aligns with the rapidly evolving world. The gap between what is taught in classrooms and what is required in real-world scenarios continues to widen.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Gap between classroom and real world">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>In an era where artificial intelligence is transforming industries, our curriculum still revolves around the basics of the internet. This disconnect leaves students ill-prepared to navigate modern challenges and opportunities.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Modern technology challenges">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>The current system excels at producing textbook scholars and participants in the ever-competitive rat race but falls short in fostering independent thinkers and innovators.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Students in competitive education system">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="solution" class="solution">
-        <div class="container solution-content">
-            <h2 class="section-heading">Our Solution</h2>
-            <p>The <strong>Avasar Initiative</strong> was created—<em>an effort to bridge these gaps and cultivate a generation of driven, disciplined, and destiny-shaping individuals.</em></p>
-            <a href="#contact" class="cta-button">Join Our Initiative</a>
-        </div>
-    </section>
-
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@avasarinitiative.org</p>
-                    <p>Phone: +91 12345 67890</p>
-                    <p>Address: New Delhi, India</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="#home">Home</a></p>
-                    <p><a href="#challenges">Challenges</a></p>
-                    <p><a href="#solution">Our Solution</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>© 2025 The Avasar Initiative. All Rights Reserved.</p>
-            </div>
+            <p>© 2025 The Avasar Initiative. All Rights Reserved.</p>
         </div>
     </footer>
 
