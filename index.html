@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>The Avasar Initiative</title>
     <style>
         /* Base Styles */
         :root {
-            --primary-blue: #2a4ca0;
-            --gold: #f2d675;
-            --light-gold: #fdf7e4;
-            --dark-blue: #1a3163;
-            --white: #ffffff;
-            --gray: #f4f4f4;
-            --dark-gray: #333333;
+            --heading-color: #1e3a8a; /* Heading color */
+            --font-color: #1d6d55;   /* Body font color */
+            --white: #ffffff;        /* Background */
+            --gold: #f2d675;         /* Hover effects */
         }
         
         * {
@@ -23,11 +21,16 @@
         }
         
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            font-size: 20px;
             line-height: 1.6;
-            color: var(--dark-gray);
+            color: var(--font-color);
             background-color: var(--white);
             overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            color: var(--heading-color);
         }
         
         .container {
@@ -70,7 +73,7 @@
         
         nav ul li a {
             text-decoration: none;
-            color: var(--primary-blue);
+            color: var(--font-color);
             font-weight: bold;
             transition: color 0.3s ease;
         }
@@ -82,7 +85,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background-color: var(--light-gold);
+            background-color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,7 +95,7 @@
         
         .hero-content h1 {
             font-size: 3rem;
-            color: var(--primary-blue);
+            color: var(--heading-color);
             margin-bottom: 20px;
         }
         
@@ -100,7 +103,7 @@
             font-size: 1.5rem;
             max-width: 800px;
             margin: 0 auto;
-            color: var(--dark-blue);
+            color: var(--font-color);
         }
         
         /* Challenges Section */
@@ -112,7 +115,7 @@
         .section-heading {
             text-align: center;
             font-size: 2.5rem;
-            color: var(--primary-blue);
+            color: var(--heading-color);
             margin-bottom: 50px;
         }
         
@@ -149,11 +152,11 @@
         }
         
         .challenge-text p strong {
-            color: var(--primary-blue);
+            color: var(--heading-color);
         }
         
         .challenge-text p em {
-            color: var(--dark-blue);
+            color: var(--heading-color);
             font-style: normal;
             font-weight: bold;
         }
@@ -172,7 +175,7 @@
         /* Our Solution Section */
         .solution {
             padding: 80px 0;
-            background-color: var(--light-gold);
+            background-color: var(--white);
             text-align: center;
         }
         
@@ -190,7 +193,7 @@
         .cta-button {
             display: inline-block;
             padding: 12px 30px;
-            background-color: var(--primary-blue);
+            background-color: var(--heading-color);
             color: var(--white);
             text-decoration: none;
             border-radius: 5px;
@@ -200,12 +203,12 @@
         }
         
         .cta-button:hover {
-            background-color: var(--dark-blue);
+            background-color: #152560; /* Slightly darker blue for hover */
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark-blue);
+            background-color: var(--heading-color);
             color: var(--white);
             padding: 40px 0;
             text-align: center;
@@ -382,7 +385,7 @@
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 The Avasar Initiative. All Rights Reserved.</p>
+                <p>© 2025 The Avasar Initiative. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
