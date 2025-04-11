@@ -4,18 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Avasar Initiative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* Base Styles */
-        :root {
-            --primary-blue: #2a4ca0;
-            --gold: #f2d675;
-            --light-gold: #fdf7e4;
-            --dark-blue: #1a3163;
-            --white: #ffffff;
-            --gray: #f4f4f4;
-            --dark-gray: #333333;
-        }
-        
         * {
             margin: 0;
             padding: 0;
@@ -23,389 +15,139 @@
         }
         
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
-            overflow-x: hidden;
+            font-family: 'Podkova', serif;
+            line-height: 1.5;
+            background-color: #ffffff;
+            color: #1e3a8a; /* Blue color for normal text as specified */
         }
         
         .container {
-            width: 85%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0;
         }
         
         /* Header Styles */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
+            background-color: #ffffff;
             width: 100%;
-            top: 0;
-            z-index: 1000;
+            padding: 20px 0;
         }
         
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 0;
-        }
-        
-        .logo {
-            height: 80px;
-            width: auto;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: var(--primary-blue);
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--gold);
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background-color: var(--light-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 110px;
-        }
-        
-        .hero-content h1 {
-            font-size: 3rem;
-            color: var(--primary-blue);
-            margin-bottom: 20px;
-        }
-        
-        .hero-content p {
-            font-size: 1.5rem;
-            max-width: 800px;
-            margin: 0 auto;
-            color: var(--dark-blue);
-        }
-        
-        /* Challenges Section */
-        .challenges {
-            padding: 80px 0;
-            background-color: var(--white);
-        }
-        
-        .section-heading {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 50px;
-        }
-        
-        .challenge-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 100px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-        
-        .challenge-item.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .challenge-item:nth-child(odd) {
-            flex-direction: row;
-        }
-        
-        .challenge-item:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
-        .challenge-text {
-            flex: 1;
-            padding: 20px;
-        }
-        
-        .challenge-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-        
-        .challenge-text p strong {
-            color: var(--primary-blue);
-        }
-        
-        .challenge-text p em {
-            color: var(--dark-blue);
-            font-style: normal;
-            font-weight: bold;
-        }
-        
-        .challenge-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .challenge-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* Our Solution Section */
-        .solution {
-            padding: 80px 0;
-            background-color: var(--light-gold);
-            text-align: center;
-        }
-        
-        .solution-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .solution-content p {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--primary-blue);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: background-color 0.3s ease;
-        }
-        
-        .cta-button:hover {
-            background-color: var(--dark-blue);
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark-blue);
-            color: var(--white);
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        
-        .footer-section {
-            flex: 1;
-            min-width: 250px;
-            margin-bottom: 20px;
+        .logo-container {
+            text-align: left;
             padding: 0 20px;
         }
         
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--gold);
+        .logo {
+            height: auto;
+            max-width: 150px;
         }
         
-        .footer-section p, .footer-section a {
-            margin-bottom: 10px;
-            color: var(--white);
-            text-decoration: none;
+        /* Banner Styles */
+        .banner {
+            width: 100%;
+            background-color: #f4a788; /* Peach/salmon color from the banner */
+            padding: 20px 0;
+            text-align: center;
         }
         
-        .footer-section a:hover {
-            color: var(--gold);
+        .banner-image {
+            max-width: 500px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+            border: 2px solid #000;
         }
         
-        .social-links a {
-            margin: 0 10px;
-            font-size: 1.2rem;
+        /* Section Styles */
+        .section {
+            padding: 30px 20px;
+            width: 100%;
         }
         
-        .copyright {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+        .section-title {
+            font-size: 59.4px; /* As specified */
+            color: #000000; /* As specified */
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+        
+        .challenge-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            gap: 40px;
+        }
+        
+        .text-content {
+            flex: 1;
+            font-size: 24.6px; /* As specified */
+            color: #1e3a8a; /* As specified */
+        }
+        
+        .image-container {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .challenge-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border: 2px solid #000;
         }
         
         /* Responsive Design */
         @media (max-width: 768px) {
-            .challenge-item, .challenge-item:nth-child(even) {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .challenge-text, .challenge-image {
-                padding: 15px;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .nav-container {
+            .challenge-content {
                 flex-direction: column;
             }
             
-            nav ul {
-                margin-top: 15px;
+            .section-title {
+                font-size: 40px;
             }
             
-            nav ul li {
-                margin: 0 10px;
-            }
-            
-            .hero {
-                margin-top: 160px;
+            .text-content {
+                font-size: 20px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container nav-container">
-            <img src="/api/placeholder/200/80" alt="Avasar Initiative Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#challenges">Challenges</a></li>
-                    <li><a href="#solution">Our Solution</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="container">
+            <div class="logo-container">
+                <img src="logo.png" alt="The Avasar Initiative Logo" class="logo">
+            </div>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <img Avasar Initiative Logo.png>
-            <p>Bridging the gap between education and real-world skills in India</p>
-        </div>
-    </section>
-
-    <section id="challenges" class="challenges">
+    <section class="banner">
         <div class="container">
-            <h2 class="section-heading">The Challenges We Address</h2>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p><strong>India's education system</strong> is rich in content but <em>lacks the practicality</em> needed to prepare students for the real world. Although the curriculum is comprehensive, the relentless <em>focus on rote learning</em> and <em>marks-based assessments</em> has made education <em>monotonous, overly theoretical</em>, and, in many cases, <em>outdated</em>.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Students focused on rote learning">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>As educators and mentors, <em>we carry the responsibility of equipping students with a fresh, relevant perspective</em>—one that aligns with the rapidly evolving world. The gap between what is taught in classrooms and what is required in real-world scenarios continues to widen.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Gap between classroom and real world">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>In an era where artificial intelligence is transforming industries, our curriculum still revolves around the basics of the internet. This disconnect leaves students ill-prepared to navigate modern challenges and opportunities.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Modern technology challenges">
-                </div>
-            </div>
-            
-            <div class="challenge-item">
-                <div class="challenge-text">
-                    <p>The current system excels at producing textbook scholars and participants in the ever-competitive rat race but falls short in fostering independent thinkers and innovators.</p>
-                </div>
-                <div class="challenge-image">
-                    <img src="/api/placeholder/400/300" alt="Students in competitive education system">
-                </div>
-            </div>
+            <img src="Avasarbanner.jpg" alt="Avasar Initiative Banner" class="banner-image">
         </div>
     </section>
 
-    <section id="solution" class="solution">
-        <div class="container solution-content">
-            <h2 class="section-heading">Our Solution</h2>
-            <p>The <strong>Avasar Initiative</strong> was created—<em>an effort to bridge these gaps and cultivate a generation of driven, disciplined, and destiny-shaping individuals.</em></p>
-            <a href="#contact" class="cta-button">Join Our Initiative</a>
-        </div>
-    </section>
-
-    <footer id="contact">
+    <section class="section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>Email: info@avasarinitiative.org</p>
-                    <p>Phone: +91 12345 67890</p>
-                    <p>Address: New Delhi, India</p>
+            <h1 class="section-title">The Challenges</h1>
+            
+            <div class="challenge-content">
+                <div class="text-content">
+                    <p>India's education system is rich in content but lacks the practicality needed to prepare students for the real world. Although the curriculum is comprehensive, the relentless focus on rote learning and marks-based assessments has made education monotonous, overly theoretical, and, in many cases, outdated.</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <p><a href="#home">Home</a></p>
-                    <p><a href="#challenges">Challenges</a></p>
-                    <p><a href="#solution">Our Solution</a></p>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#">Facebook</a>
-                        <a href="#">Twitter</a>
-                        <a href="#">Instagram</a>
-                    </div>
+                <div class="image-container">
+                    <img src="Book Burden.jpg" alt="Book Burden" class="challenge-image">
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2025 The Avasar Initiative. All Rights Reserved.</p>
-            </div>
+            
+            <!-- Additional content would go here based on images 3 and 4 -->
+            
         </div>
-    </footer>
-
-    <script>
-        // Scroll reveal animation
-        document.addEventListener('DOMContentLoaded', function() {
-            const challengeItems = document.querySelectorAll('.challenge-item');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.2
-            });
-            
-            challengeItems.forEach(item => {
-                observer.observe(item);
-            });
-        });
-    </script>
+    </section>
 </body>
 </html>
