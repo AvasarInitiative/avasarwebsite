@@ -19,6 +19,17 @@
             padding: 20px;
             text-align: center;
         }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px; /* Adjust size as needed */
+            height: auto;
+            display: block;
+        }
         .nav {
             margin-bottom: 30px;
         }
@@ -41,7 +52,7 @@
             line-height: 1.5;
             margin: 20px 0;
         }
-        img {
+        img:not(.logo img) {
             max-width: 100%;
             height: auto;
             margin: 20px 0;
@@ -60,12 +71,17 @@
 </head>
 <body>
     <div class="container">
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">About Us</a>
-            <a href="#">The Initiative</a>
+        <div class="header">
+            <div class="logo">
+                <img src="logo.png" alt="Avasar Initiative Logo">
+            </div>
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">The Initiative</a>
+            </div>
         </div>
-        <img src="Avastatogo.jpg" alt="Avasar Initiative">
+        <img src="Avastatogo.png" alt="Avasar Initiative">
         <h1>The Challenges</h1>
         <img src="Book Burden.jpg" alt="Book Burden">
         <p>
