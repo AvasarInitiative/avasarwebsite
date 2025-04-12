@@ -9,149 +9,84 @@
     body {
       margin: 0;
       font-family: 'Podkova', serif;
-      font-size: 24.6px;
-      line-height: 1.6;
+      background-color: #ffffff;
       color: #1c1c1c;
+      font-size: 24px;
     }
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
     }
 
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-size: 20px;
+    header img {
+      width: 120px;
     }
 
-    .hero {
-      background-color: #f9d5d3;
-      text-align: center;
+    .banner {
+      background-color: #efa693;
+      display: flex;
+      justify-content: center;
       padding: 40px 20px;
     }
 
-    .hero img {
-      max-width: 300px;
+    .banner img {
+      max-width: 100%;
+      height: auto;
     }
 
-    h1, h2 {
-      font-size: 45px;
-      margin-top: 40px;
+    .content {
+      padding: 60px 40px 20px;
+    }
+
+    .content h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
       text-align: center;
     }
 
-    .challenges {
+    .challenge-section {
       display: flex;
-      justify-content: center;
       align-items: flex-start;
-      gap: 50px;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .challenge-box {
-      width: 300px;
-    }
-
-    .challenge-box img {
-      width: 100%;
-      max-height: 200px;
-      object-fit: contain;
-    }
-
-    .initiative {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .pillars {
-      display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 20px 40px;
-    }
-
-    .pillar {
-      background-color: #f5b5ae;
-      padding: 20px;
-      border-radius: 10px;
-      width: 250px;
-    }
-
-    footer {
-      background-color: #d37f6b;
-      color: white;
-      text-align: left;
-      padding: 20px 40px;
-      margin-top: 40px;
-    }
-
-    .footer-box {
-      display: flex;
-      gap: 50px;
       flex-wrap: wrap;
+      gap: 40px;
     }
 
-    .footer-box p {
-      margin: 5px 0;
+    .challenge-section img {
+      width: 300px;
+      height: auto;
+    }
+
+    .challenge-text {
+      max-width: 600px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="AvasarLogo.png" alt="Avasar Logo" width="80" />
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About Us</a>
-      <a href="#">The Initiative</a>
-    </nav>
+    <img src="AvasarLogo.png" alt="Avasar Logo" />
   </header>
 
-  <section class="hero">
+  <section class="banner">
     <img src="Avasarbanner.png" alt="Avasar Banner" />
   </section>
 
-  <h2>The Challenges</h2>
-  <section class="challenges">
-    <div class="challenge-box">
-      <img src="Book Burden.jpg" alt="Book Student">
-      <p>Indian education system in its rich content has lacked the practicality needed to prepare students for the real world...</p>
-    </div>
-    <div class="challenge-box">
-      <img src="Perspective.jpg" alt="Perspective">
-      <p>As educators and mentors, we carry the opportunity of equipping students with the tools...</p>
-    </div>
-  </section>
-
-  <h2>The Avasar Initiative</h2>
-  <section class="initiative">
-    <p>
-      The Avasar Initiative is a holistic development program designed to bridge the gap between classroom learning and real-world application...
-    </p>
-  </section>
-
-  <section class="pillars">
-    <div class="pillar">Communication<br><small>(To enhance both verbal and written skills)</small></div>
-    <div class="pillar">Technical<br><small>(Grasp the basics of tech)</small></div>
-    <div class="pillar">Financial<br><small>(Manage a financial account and a bank profile)</small></div>
-  </section>
-
-  <footer>
-    <div class="footer-box">
-      <div>
-        <p><strong>Contact Us:</strong></p>
-        <p>Jayati Sahni<br>Co-Founder<br>72919 00006</p>
-      </div>
-      <div>
-        <p>Yagnik Agarwal<br>Co-Founder<br>72900 00060</p>
+  <section class="content">
+    <h1>The Challenges</h1>
+    <div class="challenge-section">
+      <img src="Book Burden.jpg" alt="Book Burden">
+      <div class="challenge-text">
+        <p>
+          India’s education system is built on knowledge but lacks the practical edge needed to navigate the real world.
+          Students spend years mastering textbooks, yet when faced with real-life challenges—whether in careers, decision-making,
+          or financial independence—they struggle.
+        </p>
       </div>
     </div>
-  </footer>
+  </section>
 
 </body>
 </html>
